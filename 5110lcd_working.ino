@@ -43,14 +43,14 @@ int x=0;
 void loop(){
   while(1){
     if (Serial.available() > 0){
-      incByte = Serial.readStringUntil('\n');
+      incByte = Serial.readString();
       if(incByte != ""){
         display.setCursor(0,1);
         display.clearDisplay(); 
-        display.print("on!");
-        display.println(incByte);
+        display.print("Players:");
+        display.print(incByte);
         display.display();
-        delay(8000);
+        delay(25000);
       }
        else{
         display.setCursor(1,1);
