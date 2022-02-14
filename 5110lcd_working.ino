@@ -50,7 +50,7 @@ void loop(){
         display.print("on!");
         display.println(incByte);
         display.display();
-        delay(2000);
+        delay(8000);
       }
        else{
         display.setCursor(1,1);
